@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FaceAlignTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/FaceAlignTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=corei7" />
+					<Add option="-O2" />
+					<Add option="-std=c++14" />
+					<Add option="-fopenmp -msse4.2 -Wno-unused-result" />
+					<Add option="-DUSE_OPENMP" />
+					<Add option="-DUSE_SSE" />
+					<Add directory="/usr/include" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/local/include/opencv" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lstdc++ -lm -fopenmp" />
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so" />
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/usr/local/lib/libopencv_flann.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/usr/local/lib/libopencv_imgcodecs.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_ml.so" />
+					<Add library="/usr/local/lib/libopencv_objdetect.so" />
+					<Add library="/usr/local/lib/libopencv_photo.so" />
+					<Add library="/usr/local/lib/libopencv_shape.so" />
+					<Add library="/usr/local/lib/libopencv_stitching.so" />
+					<Add library="/usr/local/lib/libopencv_superres.so" />
+					<Add library="/usr/local/lib/libopencv_video.so" />
+					<Add library="/usr/local/lib/libopencv_videoio.so" />
+					<Add library="/usr/local/lib/libopencv_videostab.so" />
+					<Add directory="/lib" />
+					<Add directory="/usr/lib" />
+					<Add directory="/usr/local/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FaceAlignTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-s" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`opencv-config --cxxflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`opencv-config --ldstaticflags`" />
+		</Linker>
+		<Unit filename="include/cfan.h" />
+		<Unit filename="include/classifier.h" />
+		<Unit filename="include/classifier/lab_boosted_classifier.h" />
+		<Unit filename="include/classifier/mlp.h" />
+		<Unit filename="include/classifier/surf_mlp.h" />
+		<Unit filename="include/common.h" />
+		<Unit filename="include/detector.h" />
+		<Unit filename="include/face_alignment.h" />
+		<Unit filename="include/face_detection.h" />
+		<Unit filename="include/feat/lab_feature_map.h" />
+		<Unit filename="include/feat/surf_feature_map.h" />
+		<Unit filename="include/feature_map.h" />
+		<Unit filename="include/fust.h" />
+		<Unit filename="include/io/lab_boost_model_reader.h" />
+		<Unit filename="include/io/surf_mlp_model_reader.h" />
+		<Unit filename="include/model_reader.h" />
+		<Unit filename="include/sift.h" />
+		<Unit filename="include/util/image_pyramid.h" />
+		<Unit filename="include/util/math_func.h" />
+		<Unit filename="include/util/nms.h" />
+		<Unit filename="src/cfan.cpp" />
+		<Unit filename="src/classifier/lab_boosted_classifier.cpp" />
+		<Unit filename="src/classifier/mlp.cpp" />
+		<Unit filename="src/classifier/surf_mlp.cpp" />
+		<Unit filename="src/face_alignment.cpp" />
+		<Unit filename="src/face_detection.cpp" />
+		<Unit filename="src/feat/lab_feature_map.cpp" />
+		<Unit filename="src/feat/surf_feature_map.cpp" />
+		<Unit filename="src/fust.cpp" />
+		<Unit filename="src/io/lab_boost_model_reader.cpp" />
+		<Unit filename="src/io/surf_mlp_model_reader.cpp" />
+		<Unit filename="src/sift.cpp" />
+		<Unit filename="src/test/face_alignment_test.cpp" />
+		<Unit filename="src/util/image_pyramid.cpp" />
+		<Unit filename="src/util/nms.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
